@@ -11,13 +11,24 @@ require_once("config.php");
 //$lista = Usuario::getList();
 //echo json_encode($lista);
 
-//Carrega uma lisa de usuários buscando pelo login
+//Carrega uma lista de usuários buscando pelo login
 //$search = Usuario::search("ra");
 //echo json_encode($search);
 
-$usuario = new Usuario();
-$usuario->login("root","123456");
+//Validação de Login
+//$usuario = new Usuario();
+//$usuario->login("root","123456");
+//echo $usuario;
 
-echo $usuario;
+//Insert de usuario no banco 
+//$aluno->insert();
+//echo $aluno;
+
+//Carrega o usuario pelo ID, e faz um update de dados
+//$usuario = new Usuario();
+//$usuario->loadByID(3);
+//$usuario->update("aluno", "trgrrr");
+//echo $usuario;
+
 
  ?>
