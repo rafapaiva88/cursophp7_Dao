@@ -138,6 +138,22 @@ class Usuario{
 
 	}
 
+//Metodo para deletar usuario
+	public function delete(){
+
+		$sql = new Sql();
+
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+			':ID'=>$this->getIdusuario()
+		));
+
+		$this->setIdusuario(0);
+		$this->setDeslogin("");
+		$this->setDessenha("");
+		$this->setDtcadastro(new datetime());
+
+	}
+
 //Metodo construtor para setar login e senha direto quando cria o objeto
 	public function __construct($login = "", $senha = ""){
 
